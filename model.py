@@ -10,7 +10,6 @@ warnings.filterwarnings('ignore')
 
 df=pd.read_csv('zomato_data.csv')
 
-#df.drop('Unnamed':0 , axis=1, inplace=True)
 print(df.head())
 x= df.drop('rate', axis=1)
 y =df['rate']
