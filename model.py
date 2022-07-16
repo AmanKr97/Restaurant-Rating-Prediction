@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 import warnings
 warnings.filterwarnings('ignore')
 
-df=pd.read_csv('zomato_data.csv')
+df=pd.read_csv('src/zomato_data.csv')
 
 print(df.head())
 x= df.drop('rate', axis=1)
@@ -23,6 +23,6 @@ et_pred=et.predict(x_test)
 
 
 import pickle
-pickle.dump(et,open('model.pkl','wb'))
-model = pickle.load(open('model.pkl','rb'))
+pickle.dump(et,open('src/model.pkl','wb'))
+model = pickle.load(open('src/model.pkl','rb'))
 print(et_pred)
